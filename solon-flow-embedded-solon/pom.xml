@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon-web</artifactId>
+            <artifactId>solon-lib</artifactId>
             <version>3.2.0</version>
         </dependency>
 
