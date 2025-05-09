@@ -4,23 +4,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <groupId>org.noear</groupId>
     <artifactId>solon-flow-embedded-solon</artifactId>
     <version>demo</version>
     <packaging>jar</packaging>
 
+    <properties>
+        <solon.version>3.3.0</solon.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>solon-lib</artifactId>
-            <version>3.2.0</version>
+            <version>${solon.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>solon-flow</artifactId>
-            <version>3.2.0</version>
+            <version>${solon.version}</version>
         </dependency>
     </dependencies>
 
