@@ -1,6 +1,6 @@
 # solon-flow-embedded-examples
 
-相关表达式与脚本，使用完整的 java 语法。
+相关表达式与脚本，支持完整的 java 语法。
 
 ### 示例
 
