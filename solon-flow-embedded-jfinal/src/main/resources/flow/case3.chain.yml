@@ -1,0 +1,7 @@
+id: "c3"
+title: "Yaml 支持换行文本块"
+layout:
+  - task: |
+      import java.util.ArrayList; //任务脚本，支持导入和注释
+      
+      System.out.println(\"hello world!\");
