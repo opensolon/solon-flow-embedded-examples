@@ -1,5 +1,5 @@
 id: demo2
-title: "这是一个 AI 智能体的流程编排。这个示例是让一个 llm 与另一个 llm 聊相声"
+title: "这是一个 AI 智能体的流程编排。这个示例是让一个 llm 与另一个 llm 聊相声（需要引入 solon-ai-flow 才可正常运行）"
 layout:
   - type: "start"
   - type: "@TextInput"
