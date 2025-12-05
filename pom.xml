@@ -13,12 +13,12 @@
     <description>Java project for solon-flow-embedded-examples</description>
 
     <modules>
-        <module>solon-flow-embedded-solon</module>
-        <module>solon-flow-embedded-jfinal</module>
-        <module>solon-flow-embedded-springboot2</module>
-        <module>solon-flow-embedded-springboot3</module>
-        <module>solon-flow-embedded-springboot4</module>
-        <module>solon-flow-embedded-vertx</module>
+        <module>solon-flow-in-solon</module>
+        <module>solon-flow-in-jfinal</module>
+        <module>solon-flow-in-springboot2</module>
+        <module>solon-flow-in-springboot3</module>
+        <module>solon-flow-in-springboot4</module>
+        <module>solon-flow-in-vertx</module>
     </modules>
 
     <build>
