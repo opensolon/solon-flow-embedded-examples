@@ -1,0 +1,4 @@
+id: "c2"
+title: "简化模式"
+layout:
+  - task: "System.out.println(\"---------hello world!\");"

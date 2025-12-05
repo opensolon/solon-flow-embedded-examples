@@ -17,6 +17,7 @@
         <module>solon-flow-embedded-jfinal</module>
         <module>solon-flow-embedded-springboot2</module>
         <module>solon-flow-embedded-springboot3</module>
+        <module>solon-flow-embedded-springboot4</module>
         <module>solon-flow-embedded-vertx</module>
     </modules>
 
