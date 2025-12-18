@@ -1,24 +1,18 @@
 package webapp;
 
-import com.jfinal.plugin.IPlugin;
-import org.noear.solon.annotation.Init;
-import org.noear.solon.annotation.Inject;
-import org.noear.solon.annotation.Managed;
-import org.noear.solon.flow.*;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Promise;
+import org.noear.solon.flow.FlowContext;
+import org.noear.solon.flow.Graph;
+import org.noear.solon.flow.Node;
+import org.noear.solon.flow.TaskComponent;
 import webapp.flow.FlowUtil;
 
-public class CodeFlowTest implements IPlugin {
+public class CodeFlowTest extends AbstractVerticle {
     @Override
-    public boolean start() {
+    public void start(Promise<Void> startPromise) {
         case1();
         case2();
-
-        return true;
-    }
-
-    @Override
-    public boolean stop() {
-        return true;
     }
 
     private void case1() {

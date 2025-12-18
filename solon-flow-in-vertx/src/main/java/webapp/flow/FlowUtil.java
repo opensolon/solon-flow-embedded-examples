@@ -18,6 +18,10 @@ public class FlowUtil {
         engine.load("classpath:flow/*.yml");
     }
 
+    public static MapContainer getContainer() {
+        return container;
+    }
+
     public static FlowEngine getEngine() {
         return engine;
     }

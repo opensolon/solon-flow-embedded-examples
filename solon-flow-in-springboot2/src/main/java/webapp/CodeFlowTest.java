@@ -1,25 +1,22 @@
 package webapp;
 
-import com.jfinal.plugin.IPlugin;
-import org.noear.solon.annotation.Init;
-import org.noear.solon.annotation.Inject;
-import org.noear.solon.annotation.Managed;
 import org.noear.solon.flow.*;
-import webapp.flow.FlowUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class CodeFlowTest implements IPlugin {
-    @Override
-    public boolean start() {
+import javax.annotation.PostConstruct;
+
+@Component
+public class CodeFlowTest {
+    @Autowired
+    FlowEngine flowEngine;
+
+    @PostConstruct
+    public void start() {
         case1();
         case2();
-
-        return true;
     }
 
-    @Override
-    public boolean stop() {
-        return true;
-    }
 
     private void case1() {
         Graph graph = Graph.create("case1", decl -> {
@@ -31,10 +28,10 @@ public class CodeFlowTest implements IPlugin {
         //可以正常输出 yaml, json
         System.out.println(graph.toYaml());
 
-        FlowUtil.getContainer().putComponent("Case1Com", new Case1Com());
-        FlowUtil.getEngine().eval(graph);
+        flowEngine.eval(graph);
     }
 
+    @Component("Case1Com")
     public static class Case1Com implements TaskComponent {
         @Override
         public void run(FlowContext context, Node node) throws Throwable {
@@ -54,6 +51,6 @@ public class CodeFlowTest implements IPlugin {
         //输出 yaml, json 时，task 为空（因为接口实列没法字符串化）
         System.out.println(graph.toYaml());
 
-        FlowUtil.getEngine().eval(graph);
+        flowEngine.eval(graph);
     }
 }

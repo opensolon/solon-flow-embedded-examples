@@ -7,5 +7,6 @@ public class HelloApp {
         Vertx vertx = Vertx.vertx();
 
         vertx.deployVerticle(new YamlFlowTest());
+        vertx.deployVerticle(new CodeFlowTest());
     }
 }

@@ -31,7 +31,7 @@ public class CodeFlowTest {
     }
 
     @Managed("Case1Com")
-    public class Case1Com implements TaskComponent {
+    public static class Case1Com implements TaskComponent {
         @Override
         public void run(FlowContext context, Node node) throws Throwable {
             System.out.println("---------hello world!");
