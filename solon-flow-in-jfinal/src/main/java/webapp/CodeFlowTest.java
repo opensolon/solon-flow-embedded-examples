@@ -1,21 +1,25 @@
 package webapp;
 
+import com.jfinal.plugin.IPlugin;
 import org.noear.solon.annotation.Init;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.annotation.Managed;
 import org.noear.solon.flow.*;
+import webapp.flow.FlowUtil;
 
-@Managed
-public class CodeFlowTest {
-    @Inject
-    FlowEngine flowEngine;
-
-    @Init
-    public void start() {
+public class CodeFlowTest implements IPlugin {
+    @Override
+    public boolean start() {
         case1();
         case2();
+
+        return true;
     }
 
+    @Override
+    public boolean stop() {
+        return true;
+    }
 
     private void case1() {
         Graph graph = Graph.create("case1", decl -> {
@@ -27,10 +31,10 @@ public class CodeFlowTest {
         //可以正常输出 yaml, json
         System.out.println(graph.toYaml());
 
-        flowEngine.eval(graph);
+        FlowUtil.getContainer().putComponent("Case1Com", new Case1Com());
+        FlowUtil.getEngine().eval(graph);
     }
 
-    @Managed("Case1Com")
     public class Case1Com implements TaskComponent {
         @Override
         public void run(FlowContext context, Node node) throws Throwable {
@@ -50,6 +54,6 @@ public class CodeFlowTest {
         //输出 yaml, json 时，task 为空（因为接口实列没法字符串化）
         System.out.println(graph.toYaml());
 
-        flowEngine.eval(graph);
+        FlowUtil.getEngine().eval(graph);
     }
 }
