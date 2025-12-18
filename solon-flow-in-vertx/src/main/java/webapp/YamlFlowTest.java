@@ -4,7 +4,7 @@ import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
 import webapp.flow.FlowUtil;
 
-public class FlowTest extends AbstractVerticle {
+public class YamlFlowTest extends AbstractVerticle {
 
     @Override
     public void start(Promise<Void> startPromise) throws Exception {

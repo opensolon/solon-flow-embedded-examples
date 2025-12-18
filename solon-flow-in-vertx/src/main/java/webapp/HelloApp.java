@@ -6,6 +6,6 @@ public class HelloApp {
     public static void main(String[] args) {
         Vertx vertx = Vertx.vertx();
 
-        vertx.deployVerticle(new FlowTest());
+        vertx.deployVerticle(new YamlFlowTest());
     }
 }

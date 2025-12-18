@@ -1,13 +1,12 @@
 package webapp;
 
+import jakarta.annotation.PostConstruct;
 import org.noear.solon.flow.FlowEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 @Component
-public class FlowTest {
+public class YamlFlowTest {
     @Autowired
     private FlowEngine flowEngine;
 

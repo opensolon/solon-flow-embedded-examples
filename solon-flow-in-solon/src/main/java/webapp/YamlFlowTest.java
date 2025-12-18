@@ -6,7 +6,7 @@ import org.noear.solon.core.bean.LifecycleBean;
 import org.noear.solon.flow.FlowEngine;
 
 @Component
-public class FlowTest implements LifecycleBean {
+public class YamlFlowTest implements LifecycleBean {
     @Inject
     FlowEngine flowEngine;
 

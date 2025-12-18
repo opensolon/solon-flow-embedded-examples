@@ -34,7 +34,7 @@ public class HelloApp extends JFinalConfig {
     }
 
     public void configPlugin(Plugins me) {
-        me.add(new FlowTest());
+        me.add(new YamlFlowTest());
     }
 
     public void configInterceptor(Interceptors me) {
