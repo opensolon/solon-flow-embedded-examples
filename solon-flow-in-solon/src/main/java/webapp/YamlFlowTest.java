@@ -1,17 +1,17 @@
 package webapp;
 
-import org.noear.solon.annotation.Component;
+import org.noear.solon.annotation.Init;
 import org.noear.solon.annotation.Inject;
-import org.noear.solon.core.bean.LifecycleBean;
+import org.noear.solon.annotation.Managed;
 import org.noear.solon.flow.FlowEngine;
 
-@Component
-public class YamlFlowTest implements LifecycleBean {
+@Managed
+public class YamlFlowTest {
     @Inject
     FlowEngine flowEngine;
 
-    @Override
-    public void start() throws Throwable {
+    @Init
+    public void start() {
         flowEngine.eval("c1");
     }
 }
