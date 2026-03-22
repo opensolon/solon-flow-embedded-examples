@@ -24,6 +24,7 @@ public class CodeFlowTest extends AbstractVerticle {
 
         //可以正常输出 yaml, json
         System.out.println(graph.toYaml());
+        System.out.println(graph.toPlantuml());
 
         FlowUtil.getContainer().putComponent("Case1Com", new Case1Com());
         FlowUtil.getEngine().eval(graph);
@@ -47,6 +48,7 @@ public class CodeFlowTest extends AbstractVerticle {
 
         //输出 yaml, json 时，task 为空（因为接口实列没法字符串化）
         System.out.println(graph.toYaml());
+        System.out.println(graph.toPlantuml());
 
         FlowUtil.getEngine().eval(graph);
     }

@@ -26,6 +26,7 @@ public class CodeFlowTest {
 
         //可以正常输出 yaml, json
         System.out.println(graph.toYaml());
+        System.out.println(graph.toPlantuml());
 
         flowEngine.eval(graph);
     }
@@ -49,6 +50,7 @@ public class CodeFlowTest {
 
         //输出 yaml, json 时，task 为空（因为接口实列没法字符串化）
         System.out.println(graph.toYaml());
+        System.out.println(graph.toPlantuml());
 
         flowEngine.eval(graph);
     }
